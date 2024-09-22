@@ -6,6 +6,7 @@ class TurtleSegitiga:
     def __init__(self, sisi):
         self.sisi = sisi
         self.t = turtle.Turtle()  # Membuat object turtle
+        self.t.shape("turtle")
         self.t.pencolor("blue")  # Set warna garis menjadi biru
 
     # Method untuk menggambar satu segitiga
@@ -19,7 +20,7 @@ class TurtleSegitiga:
         # Hitung jarak yang diperlukan agar segitiga berada di tengah
         total_width = (8 * self.sisi) + (7 * 20)  # Total panjang 8 segitiga dan jarak antar segitiga
         start_x = -total_width / 2  # Posisi x untuk memulai agar berada di tengah
-
+        
         # Pindah ke posisi awal (kiri layar)
         self.t.penup()
         self.t.goto(start_x, 0)  # Posisi y=0 agar segitiga berada di garis tengah
